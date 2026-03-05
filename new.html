@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #1F2937;
+        }
+
+        /* ================= HEADER 1 (Advanced Menu) ================= */
+
+        header{
+            width: 100%;
+        }
+
+        header:first-of-type{
+            background: linear-gradient(135deg,#0f172a,#1e293b);
+            padding: 15px 40px;
+            position: relative;
+        }
+
+        header:first-of-type button{
+            font-size: 28px;
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        #menu{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        #menu li{
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            padding: 8px 0;
+            transition: 0.3s;
+        }
+
+        #menu li::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: gold;
+            transition: 0.3s;
+        }
+
+        #menu li:hover{
+            color: gold;
+        }
+
+        #menu li:hover::after{
+            width: 100%;
+        }
+
+        /* ================= HEADER 2 (Advanced Navbar) ================= */
+
+        header:nth-of-type(2){
+            background: white;
+            padding: 18px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #1F2937;
+            font-weight: 600;
+            font-size: 15px;
+            position: relative;
+            padding: 6px 0;
+            transition: 0.3s;
+        }
+
+        nav a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 2px;
+            background: #111827;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            color: #000;
+        }
+
+        nav a:hover::after{
+            width: 100%;
+        }
+
+        /* ================= MAIN CONTENT ================= */
+
+        .container{
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #314767;
+            text-align: justify;
+        }
+
+        strong{
+            color: #000;
+        }
+
+        /* ================= MOBILE RESPONSIVE ================= */
+
+        @media (max-width: 768px){
+
+            header:first-of-type{
+                padding: 15px 20px;
+            }
+
+            #menu{
+                flex-direction: column;
+                gap: 15px;
+                background: #1e293b;
+                padding: 20px;
+                border-radius: 12px;
+                margin-top: 15px;
+            }
+
+            nav{
+                gap: 18px;
+            }
+
+            nav a{
+                font-size: 14px;
+            }
+
+            h1{
+                font-size: 30px;
+                letter-spacing: -1px;
+            }
+
+            h2{
+                font-size: 20px;
+            }
+
+            p{
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onclick="menu.hidden^=1">☰</button>
+        <ul id="menu" hidden>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </header>
+
+    <header>
+        <nav>
+            <a href="">Madridistas</a>
+            <a href="">Tickets</a>
+            <a href="">Hospitality</a>
+            <a href="">Tour</a>
+            <a href="">Shop</a>
+            <a href="">RM Play</a>
+        </nav>
+    </header>
+
+<div class="container">
+
+    <h1>123 Years of History</h1>
+
+    <h2>
+        On 6 March 1902, the first Board of Directors of the Madrid Foot Ball Club was elected.
+    </h2>
+
+    <img src="https://assets.realmadrid.com/is/image/realmadrid/ND-COPAS-DE-EUROPA-DECIMOQUINTA-SALA-DE-JUNTAS_2PC9815?$Desktop$&fit=wrap&wid=1440" alt="Real Madrid Trophy Room">
+
+    <p>
+        <strong>Real Madrid celebrates</strong> its 123rd anniversary. On 6 March 1902, 
+        the first Board of Directors of the Madrid Foot Ball Club was officially elected. 
+        That marked the beginning of the legend of the greatest club in the world. 
+        123 years later, Real Madrid is a benchmark in world sport with a record 
+        <strong>26 European Cups</strong> (15 in football and 11 in basketball) and is honoured 
+        to have been chosen by FIFA as the <strong>Club of the 20th Century.</strong>
+    </p>
+
+    <p>
+        In 2024, <strong>Real Madrid</strong> claimed five more trophies. 
+        They won La Decimoquinta at Wembley, the League, the UEFA Super Cup, 
+        and the Spanish Super Cup. In basketball, Madrid are the reigning league champions.
+    </p>
+
+    <p>
+        <strong>Spectacular silverware list</strong><br><br>
+        Under Santiago Bernabéu’s presidency alongside legendary players such as 
+        Di Stéfano, Gento, Puskas and others, Madrid conquered the first five European Cups in a row.
+        Today, Real Madrid continues to dominate world football and basketball.
+    </p>
+
+    <p>
+        The Santiago Bernabéu stadium is undergoing a major transformation 
+        to become one of the most iconic stadiums in the world.
+    </p>
+
+    <p>
+        Real Madrid is the first football club to exceed €1 billion in revenue 
+        and has more than 600 million followers on social media.
+    </p>
+
+</div>
+
+</body>
+</html>
